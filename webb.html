@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            height: 110px;
+            width: 100%;
+            margin-bottom: 1px solid wheat;
+            position: sticky;
+            z-index: 1000;
+            top: 0;
+            
+        }
+        .head-top {
+            background-color: black;
+            display: flex;
+            color: white;
+            height: 35px;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            z-index: 1000;
+            top: 0;
+
+        }
+        .head-bot {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+            padding-left: 80px;
+            padding-right: 80px;
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+        }
+        .left {
+            display: flex;
+            gap: 4px;
+        }
+        .luxe {
+            font-size: 2.5rem;
+        }
+        .dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: orange;
+            margin-top: 32px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+        .right{
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+        nav a:hover {
+            color: blue;
+        }
+        .back {
+            background: linear-gradient(90deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .12)),
+            url(https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1800)center/cover no-repeat;
+            min-height: 600px;
+            margin-top: 25px;
+            padding-top: 100px;
+            padding-left: 100px;
+            font-size: xx-large;
+        }
+        button {
+            background-color: darkgoldenrod;
+            color: white;
+            border-radius: 3px;
+            padding: 15px;
+            width: 200px;
+        }
+        button:hover {
+            background-color: darkred;
+            transform: translateY(-5px);
+        }
+        .explore {
+            color: darkgoldenrod;
+            font-size: 10px;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            margin-top: 80px;
+            margin-left: 30px;
+            font-weight: 700;
+        }
+        
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .section-heading h2 {
+            font-weight: 700;
+            font-size: 40px;
+        }
+        .view-all {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+        }
+        .category-card {
+            position: relative;
+            height: 360px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .category-card img {
+            object-fit: cover;
+            height: 260px;
+            width: 260px;
+        }
+        .category-title {
+            position: absolute;
+            bottom: 25px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+            z-index: 1;
+        }
+        .category-overlay {
+            position: absolute;
+            background: linear-gradient(transparent 40%,rgba(0,0,0,0.65));
+        }
+        .sec-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .handpick {
+            color: darkgoldenrod;
+            font-size: 10px;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            margin-top: 50px;
+            margin-left: 30px;
+            font-weight: 700;
+        }
+        .all {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head-top">
+            FREE SHIPPING ON ORDERS ABOVE ₦100,000
+        </div>
+        <div class="head-bot">
+            <div class="left">
+                <div class="luxe">LUXE</div>
+                <div class="dot"></div>
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+            </nav>
+            <div class="right">
+                <div>⌕</div>
+                <div>♙</div>
+                <div>♧</div>
+            </div>
+        </div>
+    </header>
+        <div class="back">
+            <p style="color: darkgoldenrod;">NEW COLLECTION 2026</p><br>
+            <h1 style="color: white;">Style thats<br>speaks for you.</h1><br>
+            <p style="color: white;">Discover timeless fashion pieces to make every<br> moment unforgettable.</p><br>
+            <button>SHOP COLLECTION →</button>
+        </div>
+    <section class="categories" id="categories">
+        <div class="explore">
+         <p>EXPLORE OUR STORE</p>
+        </div>
+        <div class="section-heading">
+                <h2>Shop by Category</h2>
+            <a href="#products" class="view-all">
+                View All →
+            </a>
+        </div>
+
+        <div class="category-container">
+            <a href="#product" class="category-card">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700" alt="Womens's Fashion">
+                <div class="category-overlay"></div>
+               <div class="category-title">Women's Fashion</div>
+            </a>
+            <a href="#product" class="category-card">
+                <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=700" alt="Men's Fashion">
+                <div class="category-overlay"></div>
+               <div class="category-title">Men's Fashion</div> 
+            </a>
+            <a href="#product" class="category-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700" alt="Footwear">
+                <div class="category-overlay"></div>
+               <div class="category-title">Footwear</div>
+            </a>
+            <a href="#product" class="category-card">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=700" alt="Accessories">
+                <div class="category-overlay"></div>
+                <div class="category-title">Accessories</div>
+            </a>
+        </div>
+    </section>
+    <section class="products">
+    <div class="handpick">
+        <p>HANDPICKED FOR YOU</p>
+    </div>
+    <div class="sec-heading">
+        <h2>Featured Products</h2>
+        <a href="#" class="all">
+        View All Products →
+        </a>
+    </div>
+    <div class="products-container">
+        <div class="products-card">
+            <span class="tag">-20%</span>
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Classic Casual Jacket">
+            </div>
+            <div class="info">
+                <p class="product-category">MEN'S CLOTHING</p>
+                <h3>Classic Casual Jacket</h3>
+                <p class="price">₦85,000
+                    <span class="old-price">₦105,000</span>
+                </p>
+                <button class="add-cart">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="products-card">
+
+        </div>
+
+    </div>
+    </section>
+</head>
+</body>
+</html>

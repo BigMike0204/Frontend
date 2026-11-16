@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       body {
+        background-color: white;
+       }
+       header {
+        display: flex;
+        background-color: black;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+        
+       }
+       header nav{
+        display: flex;
+        gap: 25px;
+        margin: 0 auto;
+       }
+       header nav a {
+        color: white;
+        text-decoration: none;
+       }
+       header.logout {
+        color: red;
+        font-size: 15px;
+        font-weight: bold;
+       }
+       .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        min-height: 500px;
+       }
+       .left {
+        width: 150px;
+        min-width: 150px;
+        padding: 15px 10px;
+       }
+       .right {
+        width: 150px;
+        min-width: 150px;
+        padding: 15px 10px;
+       }
+       aside {
+        background-color: lightgray;
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        gap: 12px;
+        width: 180px;
+       }
+        .content {
+         flex: 1;
+         padding: 15px;
+         background: whitesmoke;
+         }
+       .box{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3,1fr);
+         }
+      .card {
+        background: white;
+        border: 1px solid whitesmoke;
+        padding: 10px;
+        text-align: center;
+        box-shadow: none;
+       }
+       .card img{
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 5px;
+       }
+       .card h2{
+        font-size: 10px;
+       }
+       .card p{
+        font-size: 10px;
+       }
+       footer {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+        gap: 30px;
+       }
+       .foot a { 
+        color: white;
+        text-decoration: none;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+         <nav>
+            <a href="#Home">Home</a>
+            <a href="#about us">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#" class="Logout-btn">Logout</a>
+    </header>
+    </div>
+    <div class="container">
+        <aside class="sidebar-left">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#profile">Profile</a>
+                <a href="#Messages">Messages</a>
+                <a href="#friends">Friends</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#settings">Settings</a>
+                <a href="#Help">Help</a>
+                <a href="#Support">Support</a>
+        </aside>
+    <div class="content">
+        <div class="box">
+            <div class="card">
+                <img src="nature.jpg" alt="Nature">
+                <h2>Nature</h2>
+                <p>Beautiful scenery of mountains and rivers.</p>
+            </div>
+            <div class="card">
+                <img src="tech.jpeg" alt="Technology">
+                <h2>Technology</h2>
+                <p>Latest trends in mobile and web apps.</p>
+            </div>
+            <div class="card">
+                <img src="20260622_202146000_iOS.jpg" alt="Sports">
+                <h2>Sports</h2>
+                <p>Stay updated with football and basketball.</p>
+            </div>
+            <div class="card">
+                <img src="edu.jpg" alt="Education">
+                <h2>Education</h2>
+                <p>Learning resources and study guide.</p>
+            </div>
+            <div class="card">
+                <img src="health-jpeg" alt="Health">
+                <h2>Health</h2>
+                <p>Tips for a healthy and balanced lifestyle.</p>
+            </div>
+            <div class="card">
+                <img src="travel-img.jpg" alt="Travel">
+                <h2>Travel</h2>
+                <p>Discover amazing destinations worldwide.</p>
+            </div>
+            <div>
+                 <aside class="sidebar-right">
+                <a href="#notifications">Notifications</a>
+                <a href="#calender">Calender</a>
+                <a href="#task">Task</a>
+                <a href="#events">Events</a>
+                <a href="#reports">Reports</a>
+                <a href="#analytics">Analytics</a>
+                <a href="#Faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </aside>
+    </div>
+    </div>
+    
+</body>
+</html>

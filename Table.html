@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid black;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 1px solid black;
+            text-align: center;
+        }
+        tr:hover{
+            background-color: blue;
+            color: white;
+        }
+        tr:nth-child(2n+1){
+            background-color: green;
+            color: white;
+        }
+        tr:nth-child(2n){
+            background-color: gray;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Tables in html</h2>
+    <p>table tag is used to define a table in html</p>
+    <p>tr is used to define table row</p>
+    <p>th is used to define table head</p>
+    <p>td is used to define table data</p>
+    <table>
+        <caption>Students Data</caption>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Fola Wale</td>
+            <td>30</td>
+            <td>Lagos</td>
+        </tr>
+        <tr>
+            <td>Fola Yemi</td>
+            <td>26</td>
+            <td>Ibadan</td>
+        </tr>
+        <tr>
+            <td>BIg Mike</td>
+            <td>20</td>
+            <td>Port Harcourt</td>
+        </tr>
+        <tr>
+            <td>Johny West</td>
+            <td>19</td>
+            <td>Ilorin</td>
+        </tr>
+    </table>
+</body>
+</html>
