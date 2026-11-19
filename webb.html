@@ -78,7 +78,7 @@
             background: linear-gradient(90deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .12)),
             url(https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1800)center/cover no-repeat;
             min-height: 600px;
-            margin-top: 25px;
+            margin-top: 2px;
             padding-top: 100px;
             padding-left: 100px;
             font-size: xx-large;
@@ -120,17 +120,29 @@
             text-decoration: none;
             color: black;
             font-weight: 700;
+            margin-right: 25px;
+        }
+        .category-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+            justify-content: center;
+            
         }
         .category-card {
             position: relative;
-            height: 360px;
-            margin-left: 30px;
-            margin-right: 30px;
+            overflow: hidden;
         }
         .category-card img {
             object-fit: cover;
-            height: 260px;
-            width: 260px;
+            height: 290px;
+            width: 280px;
+            transition: transform 0.5s;
+        }
+        .category-card:hover img {
+            transform: scale(1.05);
         }
         .category-title {
             position: absolute;
@@ -139,6 +151,7 @@
             color: white;
             font-size: 20px;
             z-index: 1;
+            font-weight: bolder;
         }
         .category-overlay {
             position: absolute;
@@ -149,8 +162,8 @@
             justify-content: space-between;
             align-items: end;
             margin-bottom: 30px;
-            margin-top: 30px;
-            margin-left: 30px;
+            margin-top: 20px;
+            margin-left: 20px;
         }
         .handpick {
             color: darkgoldenrod;
@@ -165,6 +178,134 @@
             text-decoration: none;
             color: black;
             font-weight: 700;
+            margin-right: 30px;
+        }
+        .products-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            margin-left: 10px;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        .products-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .product-image {
+            height: 290px;
+            overflow: hidden;
+            background: white;
+            gap: 15px;
+            width: 290px;
+            object-fit: cover;
+        }
+        .product-image img {
+            height: 290px;
+            width: 290px;
+            transition: 0.5s;
+            object-fit: cover;
+        }
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: darkgoldenrod;
+            color: white;
+            font-size: 12px;
+            padding: 5px 10px;
+            z-index: 1000;
+        }
+        .info {
+            padding: 15px 0;
+            border: 2px solid whitesmoke;
+            width: 280px;
+            transition: 0.5s;
+        }
+        .product-category {
+            font-size: 10px;
+            color: darkgrey;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            font-weight: 600;
+        }
+        .products-card:hover img {
+            transform: scale(1.05);
+        }
+        .info h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-left: 12px;
+        }
+        .price {
+            font-weight: 600;
+            margin-bottom: 20px;
+            margin-left: 15px;
+            transition: 0.5s;
+            
+        }
+        .old-price {
+            color: black;
+            text-decoration: line-through;
+            font-weight: 100;
+            margin-left: 5px;
+        }
+        .add-cart {
+            width: 100%;
+            color: black;
+            border: 1px solid dimgray;
+            font-size: 10px;
+            padding: 10px;
+            background: white;
+            transition: 0.3s;
+            letter-spacing: 1px;
+            width: 240px;
+            height: 35px;
+            justify-content: center;
+            margin-left: 17px;
+            margin-right: 15px;
+            transform: scale(1.05);
+        }
+        .add-cart:hover {
+            background: black;
+            color: white;
+        }
+        .promotion-content {
+            background: linear-gradient(90deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .12)),
+            url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600')center/cover no-repeat;
+            color: blanchedalmond;
+            min-height: 400px;
+            margin-top: 100px;
+            padding-top: 100px;
+            padding-left: 100px;
+            font-size: x-large;
+        }
+        .promotion-content p {
+            margin-bottom: 30px;
+            color: darkgoldenrod;
+            font-size: small;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        .discount {
+            text-align: center;
+            background-color: whitesmoke;
+            padding-top: 100px;
+        }
+        .discount p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .discount h2 {
+            font-weight: bolder;
+            font-size: xx-large;
+            margin-top: 10px;
+        }
+        .exclusive {
+            color: darkgrey;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -244,7 +385,7 @@
     <div class="products-container">
         <div class="products-card">
             <span class="tag">-20%</span>
-            <div class="img">
+            <div class="product-image">
                 <img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Classic Casual Jacket">
             </div>
             <div class="info">
@@ -257,10 +398,59 @@
             </div>
         </div>
         <div class="products-card">
-
+            <span class="tag">NEW</span>
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=700" alt="Elegant Summer Dress">
+            </div>
+            <div class="info">
+                <p class="product-category">WOMEN'S CLOTHING</p>
+                <h3>Elegant Summer Dress</h3>
+                <p class="price">₦65,000</p>
+                <button class="add-cart">ADD TO CART</button>
+            </div>
         </div>
-
+        <div class="products-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700" alt="Footwear">
+            </div>
+            <div class="info">
+                <p class="product-category">FOOTWEAR</p>
+                <h3>Premium Sport Sneakers</h3>
+                <p class="price">₦95,000</p>
+                <button class="add-cart">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="products-card">
+            <span class="tag" style="color: white; background-color: red;">-15%</span>
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=700" alt="Accessories">
+            </div>
+            <div class="info">
+                <p class="product-category">ACCESSORIES</p>
+                <h3>Luxury Leather Handbag</h3>
+                <p class="price">₦120,000</p>
+                <button class="add-cart">ADD TO CART</button>
+            </div>
+        </div>
     </div>
+    </section>
+    <section class="promotion">
+        <div class="promotion-content">
+            <p class="limited">LIMITED TIME OFFER</p>
+            <h1 style="letter-spacing: normal;">Upgrade Your Style.<br>Save More.</h1>
+            <p style="color: white; margin-top: 20px;">Enjoy up to 30% off selected collections.</p>
+            <button>EXPLORE DEALS →</button>
+        </div>
+    </section>
+    <section class="discount" id="discount">
+            <p class="loop" style="color: darkgoldenrod; letter-spacing: 2px; font-size: small; font-weight: 700;">STAY IN THE LOOP</p>
+            <h2>Get 10% Off Your First Order</h2>
+            <p class="exclusive">Subscribe to receive exclusive offers and new arrivals.</p>
+            <form class="letterform">
+                <input style="width: 400px; height: 50px; padding-left: 15px; margin-left: 40px;" type="email" id="email" placeholder="Enter your email address" required>
+                <button type="submit" style="height: 50px; width: 100px; background-color: black; text-align: center; padding-right: 20px; font-family: 'Courier New', Courier, monospace;">SUBSCRIBE</button>
+            </form>
+            <P id="newsletter-message"></P>
     </section>
 </head>
 </body>
