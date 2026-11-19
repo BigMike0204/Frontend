@@ -307,6 +307,27 @@
             color: darkgrey;
             margin-bottom: 20px;
         }
+        .submit {
+        height: 50px;
+        width: 100px; 
+        background-color: black;
+        text-align: center;
+        padding-right: 20px; 
+        font-family: 'Courier New', Courier, monospace;
+        }
+        .letterform input {
+        width: 400px; 
+        height: 50px; 
+        padding-left: 15px; 
+        margin-left: 40px; 
+        margin-bottom: 100px;
+        }
+        .discountloop p {
+            color: darkgoldenrod; 
+            letter-spacing: 2px; 
+            font-size: small; 
+            font-weight: 700
+        }
     </style>
 </head>
 <body>
@@ -443,12 +464,12 @@
         </div>
     </section>
     <section class="discount" id="discount">
-            <p class="loop" style="color: darkgoldenrod; letter-spacing: 2px; font-size: small; font-weight: 700;">STAY IN THE LOOP</p>
+            <p class="loop">STAY IN THE LOOP</p>
             <h2>Get 10% Off Your First Order</h2>
             <p class="exclusive">Subscribe to receive exclusive offers and new arrivals.</p>
             <form class="letterform">
-                <input style="width: 400px; height: 50px; padding-left: 15px; margin-left: 40px;" type="email" id="email" placeholder="Enter your email address" required>
-                <button type="submit" style="height: 50px; width: 100px; background-color: black; text-align: center; padding-right: 20px; font-family: 'Courier New', Courier, monospace;">SUBSCRIBE</button>
+            <input type="email" id="email" placeholder="Enter your email address" required>
+            <button class="submit" type="submit">SUBSCRIBE</button>
             </form>
             <P id="newsletter-message"></P>
     </section>
